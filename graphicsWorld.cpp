@@ -136,7 +136,7 @@ void GraphicsWorld::run()
     sh[3]->display();
 #endif
 
-#if 1
+#if 0
     std::cout << "\nTesting Functions in class Circle:\n"
               << std::endl;
     Circle c(3, 5, 9, "CIRCLE C");
