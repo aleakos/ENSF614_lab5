@@ -48,17 +48,22 @@ double Shape::distance(Shape &the_shape, Shape &other)
 
 Shape &Shape::operator=(const Shape &rhs)
 {
+
     if (this != &rhs)
     {
         origin = rhs.getOrigin();
+        delete[] shapeName;
         shapeName = new char[strlen(rhs.getName()) + 1];
-        strcpy(shapeName, rhs.getName());
         assert(shapeName != NULL);
+        strcpy(shapeName, rhs.getName());
     }
     return *this;
 }
 
-Shape::Shape(const Shape &src)
+Shape::Shape(const Shape &src) : origin(src.getOrigin())
 {
-    *this = src;
+    // *this = src;
+    shapeName = new char[strlen(src.getName()) + 1];
+    assert(shapeName != 0);
+    strcpy(shapeName, src.getName());
 }
