@@ -25,8 +25,8 @@ public:
     Shape &operator=(const Shape &rhs);
 
     // is this allowed?
-    virtual double area() const {};
-    virtual double perimeter() const {};
+    virtual double area(){};
+    virtual double perimeter(){};
 };
 
 #endif

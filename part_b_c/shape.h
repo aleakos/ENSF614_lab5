@@ -7,8 +7,7 @@
 class Shape
 {
 private:
-    // is this fine?
-    Point origin = Point(0, 0);
+    Point origin;
     char *shapeName;
 
 public:

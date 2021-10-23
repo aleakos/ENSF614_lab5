@@ -16,12 +16,12 @@ CurveCut::CurveCut(double xOrigin, double yOrigin, double sideA,
     }
 }
 
-double CurveCut::area() const
+double CurveCut::area()
 {
     return (Rectangle::area() - (Circle::area() / 4));
 }
 
-double CurveCut::perimeter() const
+double CurveCut::perimeter()
 {
     return (Rectangle::perimeter() - (getRadius() * 2) + (Circle::perimeter() / 4));
 }

@@ -14,8 +14,8 @@ public:
     {
         this->radius = radius;
     };
-    double area() const { return radius * radius * 3.14159265359; }
-    double perimeter() const { return 2 * radius * 3.14159265359; }
+    double area() { return radius * radius * 3.14159265359; }
+    double perimeter() { return 2 * radius * 3.14159265359; }
     virtual void display();
     double getRadius() const { return radius; }
     void setRadius(double newRad) { radius = newRad; }

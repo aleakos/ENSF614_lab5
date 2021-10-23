@@ -14,8 +14,8 @@ public:
     {
         this->sideB = sideB;
     };
-    double area() const { return getSideA() * getSideB(); }
-    double perimeter() const { return getSideA() * 2 + getSideB() * 2; }
+    double area() { return getSideA() * getSideB(); }
+    double perimeter() { return getSideA() * 2 + getSideB() * 2; }
     virtual void display();
     double getSideB() const { return sideB; }
     void setSideB(double newB) { sideB = newB; }

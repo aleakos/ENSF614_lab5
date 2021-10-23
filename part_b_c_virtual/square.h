@@ -14,8 +14,8 @@ public:
     {
         sideA = side;
     };
-    virtual double area() const { return sideA * sideA; }
-    virtual double perimeter() const { return sideA * 4; }
+    virtual double area() { return sideA * sideA; }
+    virtual double perimeter() { return sideA * 4; }
     virtual void display();
     double getSideA() const { return sideA; }
     void setSideA(double newA) { sideA = newA; }

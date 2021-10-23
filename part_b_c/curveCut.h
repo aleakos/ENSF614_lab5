@@ -9,8 +9,8 @@ class CurveCut : public Circle, public Rectangle
 {
 public:
     CurveCut(double xOrigin, double yOrigin, double sideA, double sideB, double radius, const char *name);
-    double area() const;
-    double perimeter() const;
+    double area();
+    double perimeter();
     virtual void display();
 };
 

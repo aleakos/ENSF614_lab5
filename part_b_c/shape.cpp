@@ -48,6 +48,7 @@ double Shape::distance(Shape &the_shape, Shape &other)
 
 Shape &Shape::operator=(const Shape &rhs)
 {
+
     if (this != &rhs)
     {
         origin = rhs.getOrigin();
@@ -59,7 +60,7 @@ Shape &Shape::operator=(const Shape &rhs)
     return *this;
 }
 
-Shape::Shape(const Shape &src)
+Shape::Shape(const Shape &src) : origin(src.getOrigin())
 {
     *this = src;
 }

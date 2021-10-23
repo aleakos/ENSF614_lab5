@@ -14,8 +14,8 @@ public:
         : Square(xOrigin, yOrigin, sideA, name),
           Shape(xOrigin, yOrigin, name),
           sideB(sideB){};
-    virtual double area() const { return getSideA() * getSideB(); }
-    virtual double perimeter() const { return getSideA() * 2 + getSideB() * 2; }
+    virtual double area() { return getSideA() * getSideB(); }
+    virtual double perimeter() { return getSideA() * 2 + getSideB() * 2; }
     virtual void display();
     double getSideB() const { return sideB; }
     void setSideB(double newB) { sideB = newB; }
