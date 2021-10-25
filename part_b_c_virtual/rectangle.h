@@ -4,15 +4,16 @@
 
 #include "square.h"
 
-class Rectangle : public virtual Square
+// class Rectangle : public virtual Square
+class Rectangle : public Square
 {
 private:
     double sideB;
 
 public:
     Rectangle(double xOrigin, double yOrigin, double sideA, double sideB, const char *name)
-        : Square(xOrigin, yOrigin, sideA, name),
-          Shape(xOrigin, yOrigin, name),
+        : Shape(xOrigin, yOrigin, name),
+          Square(xOrigin, yOrigin, sideA, name),
           sideB(sideB){};
     virtual double area() { return getSideA() * getSideB(); }
     virtual double perimeter() { return getSideA() * 2 + getSideB() * 2; }

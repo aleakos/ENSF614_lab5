@@ -4,7 +4,7 @@
 
 #include "shape.h"
 
-class Square : public virtual Shape
+class Square : virtual public Shape
 {
 private:
     double sideA;

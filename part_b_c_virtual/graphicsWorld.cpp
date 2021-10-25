@@ -44,7 +44,7 @@ void GraphicsWorld::run()
               << std::endl;
 
 #endif
-#if 1
+#if 0
 
     std::cout << "\nTesting Shapes......\n"
               << std::endl;
@@ -79,7 +79,7 @@ void GraphicsWorld::run()
               << std::endl;
     squareA.setSideA(20.5);
     squareA.display();
-    std::cout << "Distance from Square A to Shape B: " << squareA.distance(shapeB) << "\n"
+    std::cout << "Distance from Square A to Shape B: " << squareA.distance(squareA) << "\n"
               << std::endl;
 #endif
 #if 1
@@ -94,7 +94,7 @@ void GraphicsWorld::run()
               << std::endl;
     rectangleA.setSideB(10);
     rectangleA.display();
-    std::cout << "Distance from 'Rectangle A' to Shape B: " << rectangleA.distance(shapeB) << "\n"
+    std::cout << "Distance from 'Rectangle A' to Shape B: " << rectangleA.distance(squareA) << "\n"
               << std::endl;
 
     std::cout << "Testing Copying..... \n"
@@ -128,12 +128,10 @@ void GraphicsWorld::run()
     Shape *sh[4];
     sh[0] = &squareA;
     sh[1] = &rectangleA;
-    sh[2] = &shapeA;
-    sh[3] = &copyRect;
+    sh[2] = &copyRect;
     sh[0]->display();
     sh[1]->display();
     sh[2]->display();
-    sh[3]->display();
 #endif
 
 #if 1
@@ -175,7 +173,6 @@ void GraphicsWorld::run()
     sh2[1]->display();
     sh2[2]->display();
     sh2[3]->display();
-    sh2[0]->display();
 
     std::cout << "\nthe area of " << sh2[0]->getName() << " is: " << sh2[0]->area();
     std::cout << "\nthe perimeter of " << sh2[0]->getName() << " is: " << sh2[0]->perimeter();
@@ -187,7 +184,7 @@ void GraphicsWorld::run()
     std::cout << "\nthe circumference of " << sh2[2]->getName() << " is: " << sh2[2]->perimeter();
     sh2[3]->display();
     std::cout << "\nthe area of " << sh2[3]->getName() << " is: " << sh2[3]->area();
-    std::cout << "\nthe perimeter of " << sh2[3]->getName() << " is: " << sh[3]->perimeter();
+    std::cout << "\nthe perimeter of " << sh2[3]->getName() << " is: " << sh2[3]->perimeter();
     std::cout << "\nTesting copy constructor in class CurveCut...copying A into new B....should display same values as A\n"
               << std::endl;
     CurveCut carveB = carveA;

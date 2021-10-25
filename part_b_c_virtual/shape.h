@@ -15,7 +15,7 @@ private:
 public:
     Shape(double xOrigin, double yOrigin, const char *src);
     virtual ~Shape();
-    virtual const Point getOrigin() const { return origin; }
+    virtual const Point &getOrigin() const { return origin; }
     virtual char *getName() const { return shapeName; }
     virtual void display();
     double distance(Shape &other);
@@ -26,8 +26,8 @@ public:
     Shape &operator=(const Shape &rhs);
 
     // is this allowed?
-    virtual double area(){};
-    virtual double perimeter(){};
+    virtual double area() = 0;
+    virtual double perimeter() = 0;
 };
 
 #endif

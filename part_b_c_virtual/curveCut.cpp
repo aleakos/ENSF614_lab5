@@ -4,14 +4,13 @@
 #include "rectangle.h"
 
 CurveCut::CurveCut(double xOrigin, double yOrigin, double sideA,
-                   double sideB, double radius, const char *name) : Circle(xOrigin, yOrigin, radius, name),
-                                                                    Rectangle(xOrigin, yOrigin, sideA, sideB, name),
-                                                                    Square(xOrigin, yOrigin, sideA, name),
-                                                                    Shape(xOrigin, yOrigin, name)
+                   double sideB, double radius, const char *name) : Shape(xOrigin, yOrigin, name),
+                                                                    Circle(xOrigin, yOrigin, radius, name),
+                                                                    Rectangle(xOrigin, yOrigin, sideA, sideB, name)
 {
     if (radius >= sideA || radius >= sideB)
     {
-        std::cout << "Error: Radius is greater than the length of one of the sides.\n";
+        std::cerr << "Error: Radius is greater than the length of one of the sides.\n";
         exit(1);
     }
 }
@@ -30,8 +29,6 @@ void CurveCut::display()
 {
     std::cout << std::fixed;
     std::cout << std::setprecision(2);
-    // is this fine since we're saying they're all the same?
-    // how tf do we make these virtual?
     std::cout << "Curve Cut Name: " << getName() << std::endl;
     std::cout << "X-coordinate: " << getOrigin().getXCoord() << std::endl;
     std::cout << "Y-coordinate: " << getOrigin().getYCoord() << std::endl;
