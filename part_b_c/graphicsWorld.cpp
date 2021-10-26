@@ -44,27 +44,7 @@ void GraphicsWorld::run()
               << std::endl;
 
 #endif
-#if 1
 
-    std::cout << "\nTesting Shapes......\n"
-              << std::endl;
-
-    std::cout << "Creating Shape A at (4,8)...\n"
-              << std::endl;
-    Shape shapeA = Shape(4, 8, "SHAPE A");
-    std::cout << "Moving by (2,1) to (6,9) ...\n"
-              << std::endl;
-    shapeA.move(2, 1);
-    shapeA.display();
-    std::cout << "Creating Shape B at (10,3)...\n"
-              << std::endl;
-    Shape shapeB = Shape(10, 3, "SHAPE B");
-
-    std::cout << "Distance from Square A to Square B (Non Static): " << shapeA.distance(shapeB) << "\n"
-              << std::endl;
-    std::cout << "Distance from Square A to Square B (Static): " << Shape::distance(shapeA, shapeB) << "\n"
-              << std::endl;
-#endif
 #if 1
 
     std::cout << "\nTesting Squares......\n"
@@ -128,29 +108,9 @@ void GraphicsWorld::run()
     Shape *sh[4];
     sh[0] = &squareA;
     sh[1] = &rectangleA;
-    sh[2] = &shapeA;
-    sh[3] = &copyRect;
+    sh[2] = &copyRect;
     sh[0]->display();
     sh[1]->display();
     sh[2]->display();
-    sh[3]->display();
 #endif
 
-#if 0
-    std::cout << "\nTesting Functions in class Circle:\n"
-              << std::endl;
-    Circle c(3, 5, 9, "CIRCLE C");
-    c.display();
-    std::cout << "the area of " << c.getName() << " is: " << c.area() << std::endl;
-    std::cout << "the perimeter of " << c.getName() << " is: " << c.perimeter() << std::endl;
-    std::cout << "\nThe distance between rectangle a and circle c is: "
-              << "\n"
-              << shapeA.distance(c);
-    CurveCut rc(6, 5, 10, 12, 9, "CurveCut rc");
-    rc.display();
-    std::cout << "the area of " << rc->Rectangle::getName() << " is: " << rc.area();
-    std::cout << "the perimeter of " << rc.getName() << " is: " << rc.perimeter();
-    d = rc.distance(c);
-    std::cout << "\nThe distance between rc and c is: " << d;
-#endif
-}
